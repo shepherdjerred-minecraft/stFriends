@@ -22,7 +22,7 @@ public class FullyConnectedFriendGetter<T extends PlayerIdentifier> implements F
   public Set<Friend> getFriends(PlayerIdentifier player) {
     if (hasFriends(player)) {
       return friends.stream()
-          .filter(friend -> friend.isSamePlayer(player))
+          .filter(friend -> !friend.isSamePlayer(player))
           .map(friendIdentifier -> {
             var friendPlayer = playerGetter.getOfflinePlayer(friendIdentifier);
             var lastOnlineTimeInMillis = friendPlayer.getLastPlayed();
@@ -30,6 +30,7 @@ public class FullyConnectedFriendGetter<T extends PlayerIdentifier> implements F
                 Instant.ofEpochMilli(lastOnlineTimeInMillis)
                     .atZone(ZoneId.systemDefault())
                     .toLocalDateTime();
+
             return new Friend(friendIdentifier,
                 friendPlayer.getName(),
                 lastOnlineTime,

@@ -22,10 +22,9 @@ public class Main extends JavaPlugin {
     var bukkitPlayerGetter = new UuidPlayerIdentifierBukkitPlayerGetter();
     var uuidPlayerIdentifierFactory = new UuidPlayerIdentifierFactory();
     var friendGetter = new FullyConnectedFriendGetter<>(friends, bukkitPlayerGetter);
-    
+
     getServer().getPluginManager().registerEvents(new FriendNotificationOnJoinEventHandler<>(
         friendGetter,
-        uuidPlayerIdentifierFactory,
-        bukkitPlayerGetter), this);
+        uuidPlayerIdentifierFactory), this);
   }
 }
