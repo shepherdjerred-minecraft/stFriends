@@ -9,7 +9,7 @@
   <artifactId>stFriends</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
-  <name>stTeleports</name>
+  <name>stFriends</name>
   <description></description>
   <url></url>
 
@@ -49,7 +49,7 @@
       <dependency>
         <groupId>org.spigotmc</groupId>
         <artifactId>spigot-api</artifactId>
-        <version>1.14.4-R0.1-SNAPSHOT</version>
+        <version>1.15.2-R0.1-SNAPSHOT</version>
       </dependency>
     </dependencies>
 </project>
