@@ -43,14 +43,34 @@ public class FriendNotificationOnJoinEventHandler<T extends PlayerIdentifier> im
     var hoursSinceLastLogin = ChronoUnit.HOURS.between(friendLoginTime, now);
     var daysSinceLastLogin = ChronoUnit.DAYS.between(friendLoginTime, now);
 
+    if (friend.isOnline()) {
+      return "Right now";
+    }
+
+    String noun;
+    long amount;
+
     if (daysSinceLastLogin > 0) {
-      return String.format("%s days ago", daysSinceLastLogin);
+      amount = daysSinceLastLogin;
+      noun = "day";
     } else if (hoursSinceLastLogin > 0) {
-      return String.format("%s hours ago", hoursSinceLastLogin);
+      amount = hoursSinceLastLogin;
+      noun = "hour";
     } else if (minutesSinceLastLogin > 0) {
-      return String.format("%s minutes ago", minutesSinceLastLogin);
+      amount = minutesSinceLastLogin;
+      noun = "minute";
     } else {
-      return "Just now";
+      return "Less than a minute ago";
+    }
+
+    return String.format("%s %s ago", amount, getPluralizedNoun(amount, noun));
+  }
+
+  private String getPluralizedNoun(long amount, String noun) {
+    if (amount == 1) {
+      return noun;
+    } else {
+      return noun + "s";
     }
   }
 }
