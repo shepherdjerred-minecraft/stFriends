@@ -14,10 +14,8 @@ public class Main extends JavaPlugin {
   @Override
   public void onEnable() {
     var friends = new HashSet<UuidPlayerIdentifier>();
-    friends.add(new UuidPlayerIdentifier(UUID.fromString("d4ee8c5b-b58d-4aa0-a2d5-84b94650eb91")));
-    friends.add(new UuidPlayerIdentifier(UUID.fromString("d90e4860-c902-43b9-af72-f7ef12f0383e")));
-    friends.add(new UuidPlayerIdentifier(UUID.fromString("455dad50-64e1-45ce-a45e-550b90c1d7b0")));
-    friends.add(new UuidPlayerIdentifier(UUID.fromString("92c6b060-6e4c-4776-822f-bd024d485956")));
+    friends.add(new UuidPlayerIdentifier(UUID.fromString("f62616e4-6c7d-4240-9dad-131f6383564a")));
+    friends.add(new UuidPlayerIdentifier(UUID.fromString("01395b25-3f13-4f00-94a1-368b77cae988")));
 
     var bukkitPlayerGetter = new UuidPlayerIdentifierBukkitPlayerGetter();
     var uuidPlayerIdentifierFactory = new UuidPlayerIdentifierFactory();
