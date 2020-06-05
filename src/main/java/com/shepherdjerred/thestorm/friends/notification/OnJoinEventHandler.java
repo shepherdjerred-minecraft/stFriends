@@ -1,5 +1,7 @@
-package com.shepherdjerred.thestorm.friends.friend;
+package com.shepherdjerred.thestorm.friends.notification;
 
+import com.shepherdjerred.thestorm.friends.friend.Friend;
+import com.shepherdjerred.thestorm.friends.friend.FriendGetter;
 import com.shepherdjerred.thestorm.friends.player.PlayerIdentifier;
 import com.shepherdjerred.thestorm.friends.player.PlayerIdentifierFactory;
 import java.time.LocalDateTime;
@@ -10,7 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 @AllArgsConstructor
-public class FriendNotificationOnJoinEventHandler<T extends PlayerIdentifier> implements Listener {
+public class OnJoinEventHandler<T extends PlayerIdentifier> implements Listener {
 
   private final FriendGetter friendGetter;
   private final PlayerIdentifierFactory<T> playerIdentifierFactory;

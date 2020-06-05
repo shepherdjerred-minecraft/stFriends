@@ -1,6 +1,6 @@
 package com.shepherdjerred.thestorm.friends;
 
-import com.shepherdjerred.thestorm.friends.friend.FriendNotificationOnJoinEventHandler;
+import com.shepherdjerred.thestorm.friends.notification.OnJoinEventHandler;
 import com.shepherdjerred.thestorm.friends.friend.FullyConnectedFriendGetter;
 import com.shepherdjerred.thestorm.friends.player.UuidPlayerIdentifier;
 import com.shepherdjerred.thestorm.friends.player.UuidPlayerIdentifierBukkitPlayerGetter;
@@ -21,7 +21,7 @@ public class Main extends JavaPlugin {
     var uuidPlayerIdentifierFactory = new UuidPlayerIdentifierFactory();
     var friendGetter = new FullyConnectedFriendGetter<>(friends, bukkitPlayerGetter);
 
-    getServer().getPluginManager().registerEvents(new FriendNotificationOnJoinEventHandler<>(
+    getServer().getPluginManager().registerEvents(new OnJoinEventHandler<>(
         friendGetter,
         uuidPlayerIdentifierFactory), this);
   }

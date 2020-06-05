@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - openjdk14
+  - oraclejdk14
+deploy:
+  provider: script
+  script: "cp .travis.settings.xml $HOME/.m2/settings.xml && mvn deploy"
+  skip_cleanup: true
