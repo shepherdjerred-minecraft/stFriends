@@ -1,4 +1,4 @@
-package com.shepherdjerred.thestorm.friends.player;
+package com.shepherdjerred.thestorm.friends.player.identifier;
 
 import java.util.UUID;
 import lombok.AllArgsConstructor;
