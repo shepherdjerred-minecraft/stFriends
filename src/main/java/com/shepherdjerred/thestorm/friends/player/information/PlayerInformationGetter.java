@@ -13,16 +13,8 @@ public class PlayerInformationGetter<T extends PlayerIdentifier> {
   public PlayerInformation getPlayerInformation(T playerIdentifier) {
     var friendPlayer = playerGetter.getOfflinePlayer(playerIdentifier);
     var lastOnlineTimeInMillis = friendPlayer.getLastPlayed();
-    var lastOnlineTime = Instant
-      .ofEpochMilli(lastOnlineTimeInMillis)
-      .atZone(ZoneId.systemDefault())
-      .toLocalDateTime();
+    var lastOnlineTime = Instant.ofEpochMilli(lastOnlineTimeInMillis).atZone(ZoneId.systemDefault()).toLocalDateTime();
 
-    return new PlayerInformation(
-      playerIdentifier,
-      friendPlayer.getName(),
-      lastOnlineTime,
-      friendPlayer.isOnline()
-    );
+    return new PlayerInformation(playerIdentifier, friendPlayer.getName(), lastOnlineTime, friendPlayer.isOnline());
   }
 }

@@ -19,26 +19,13 @@ public class Main extends JavaPlugin {
   public void onEnable() {
     var path = getDataFolder() + "/data/friends.json";
     var serializer = new JsonSerializer();
-    Datastore<UuidPlayerIdentifier> datastore = new FlatfileDatastore<>(
-      serializer,
-      path
-    );
+    Datastore<UuidPlayerIdentifier> datastore = new FlatfileDatastore<>(serializer, path);
     var bukkitPlayerGetter = new UuidPlayerIdentifierBukkitPlayerGetter();
     var uuidPlayerIdentifierFactory = new UuidPlayerIdentifierFactory();
-    var playerInformationGetter = new PlayerInformationGetter<>(
-      bukkitPlayerGetter
-    );
+    var playerInformationGetter = new PlayerInformationGetter<>(bukkitPlayerGetter);
     var friendGetter = new FriendGetter<>(datastore, playerInformationGetter);
     var notificationCreator = new NotificationCreator<>(friendGetter);
 
-    getServer()
-      .getPluginManager()
-      .registerEvents(
-        new OnJoinEventHandler<>(
-          notificationCreator,
-          uuidPlayerIdentifierFactory
-        ),
-        this
-      );
+    getServer().getPluginManager().registerEvents(new OnJoinEventHandler<>(notificationCreator, uuidPlayerIdentifierFactory), this);
   }
 }

@@ -16,10 +16,7 @@ public class FriendGetter<T extends PlayerIdentifier> {
 
   public Set<PlayerInformation> getFriends(T player) throws IOException {
     var friendIdentifiers = datastore.getFriends(player);
-    return friendIdentifiers
-      .stream()
-      .map(playerInformationGetter::getPlayerInformation)
-      .collect(Collectors.toSet());
+    return friendIdentifiers.stream().map(playerInformationGetter::getPlayerInformation).collect(Collectors.toSet());
   }
 
   public boolean hasFriends(T player) throws IOException {

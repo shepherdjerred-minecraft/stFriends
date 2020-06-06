@@ -17,8 +17,7 @@ import java.util.Set;
  * A flatfile datastore
  */
 @Log4j2
-public class FlatfileDatastore<T extends PlayerIdentifier>
-  implements Datastore<T> {
+public class FlatfileDatastore<T extends PlayerIdentifier> implements Datastore<T> {
   private final Serializer<T> serializer;
   private final File file;
 
@@ -52,8 +51,7 @@ public class FlatfileDatastore<T extends PlayerIdentifier>
     saveFriendsMap(currentFriends);
   }
 
-  private Map<T, Set<T>> getFriendsMapAndSetDefaultForPlayer(T player)
-    throws IOException {
+  private Map<T, Set<T>> getFriendsMapAndSetDefaultForPlayer(T player) throws IOException {
     var friendsMap = loadFriendsMap();
 
     Set<T> currentFriends = friendsMap.get(player);

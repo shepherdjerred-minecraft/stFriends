@@ -1,11 +1,10 @@
 package com.shepherdjerred.thestorm.friends.datastore.flatfile;
 
 import com.shepherdjerred.thestorm.friends.player.identifier.UuidPlayerIdentifier;
+import java.util.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.*;
 
 public class JsonSerializerTest {
   private JsonSerializer serializer;
@@ -13,12 +12,8 @@ public class JsonSerializerTest {
 
   private UUID firstUuid = UUID.randomUUID();
   private UUID secondUuid = UUID.randomUUID();
-  private UuidPlayerIdentifier firstIdentifier = new UuidPlayerIdentifier(
-    firstUuid
-  );
-  private UuidPlayerIdentifier secondIdentifier = new UuidPlayerIdentifier(
-    secondUuid
-  );
+  private UuidPlayerIdentifier firstIdentifier = new UuidPlayerIdentifier(firstUuid);
+  private UuidPlayerIdentifier secondIdentifier = new UuidPlayerIdentifier(secondUuid);
 
   @Before
   public void setup() {

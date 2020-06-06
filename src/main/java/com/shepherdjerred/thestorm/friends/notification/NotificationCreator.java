@@ -22,14 +22,8 @@ public class NotificationCreator<T extends PlayerIdentifier> {
         .stream()
         .map(
           playerInformation -> {
-            var friendLastOnlineMessage = getLastOnlineMessage(
-              playerInformation
-            );
-            return String.format(
-              "%s: %s\n",
-              playerInformation.getName(),
-              friendLastOnlineMessage
-            );
+            var friendLastOnlineMessage = getLastOnlineMessage(playerInformation);
+            return String.format("%s: %s\n", playerInformation.getName(), friendLastOnlineMessage);
           }
         )
         .forEach(friendsMessage::append);
@@ -44,10 +38,7 @@ public class NotificationCreator<T extends PlayerIdentifier> {
     var friendLoginTime = playerInformation.getLastLogin();
     var now = LocalDateTime.now();
 
-    var minutesSinceLastLogin = ChronoUnit.MINUTES.between(
-      friendLoginTime,
-      now
-    );
+    var minutesSinceLastLogin = ChronoUnit.MINUTES.between(friendLoginTime, now);
     var hoursSinceLastLogin = ChronoUnit.HOURS.between(friendLoginTime, now);
     var daysSinceLastLogin = ChronoUnit.DAYS.between(friendLoginTime, now);
 

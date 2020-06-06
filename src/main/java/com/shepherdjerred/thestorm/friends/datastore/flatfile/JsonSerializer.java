@@ -13,32 +13,17 @@ public class JsonSerializer implements Serializer<UuidPlayerIdentifier> {
   public JsonSerializer() {
     var builder = new GsonBuilder();
     builder.enableComplexMapKeySerialization();
-    builder.registerTypeAdapter(
-      UuidPlayerIdentifier.class,
-      new UuidPlayerIdentifierJsonSerializer()
-    );
+    builder.registerTypeAdapter(UuidPlayerIdentifier.class, new UuidPlayerIdentifierJsonSerializer());
     gson = builder.create();
   }
 
   @Override
-  public String serialize(
-    Map<UuidPlayerIdentifier, Set<UuidPlayerIdentifier>> map
-  ) {
-    return gson.toJson(
-      map,
-      new TypeToken<Map<UuidPlayerIdentifier, Set<UuidPlayerIdentifier>>>() {}
-      .getType()
-    );
+  public String serialize(Map<UuidPlayerIdentifier, Set<UuidPlayerIdentifier>> map) {
+    return gson.toJson(map, new TypeToken<Map<UuidPlayerIdentifier, Set<UuidPlayerIdentifier>>>() {}.getType());
   }
 
   @Override
-  public Map<UuidPlayerIdentifier, Set<UuidPlayerIdentifier>> deserialize(
-    String string
-  ) {
-    return gson.fromJson(
-      string,
-      new TypeToken<Map<UuidPlayerIdentifier, Set<UuidPlayerIdentifier>>>() {}
-      .getType()
-    );
+  public Map<UuidPlayerIdentifier, Set<UuidPlayerIdentifier>> deserialize(String string) {
+    return gson.fromJson(string, new TypeToken<Map<UuidPlayerIdentifier, Set<UuidPlayerIdentifier>>>() {}.getType());
   }
 }
