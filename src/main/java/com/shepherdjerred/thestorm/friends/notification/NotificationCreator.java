@@ -16,7 +16,7 @@ public class NotificationCreator<T extends PlayerIdentifier> {
 
     private final FriendGetter<T> friendGetter;
 
-    public Optional<String> createNotification(T player) throws FileNotFoundException {
+    public String createNotification(T player) throws FileNotFoundException {
         if (friendGetter.hasFriends(player)) {
             var friends = friendGetter.getFriends(player);
             var friendsMessage = new StringBuilder();
@@ -28,9 +28,9 @@ public class NotificationCreator<T extends PlayerIdentifier> {
                         return String.format("%s: %s\n", playerInformation.getName(), friendLastOnlineMessage);
                     }).forEach(friendsMessage::append);
 
-            return Optional.of(friendsMessage.toString());
+            return friendsMessage.toString();
         } else {
-            return Optional.empty();
+            return "You have no friends! Add some with /friends add";
         }
     }
 

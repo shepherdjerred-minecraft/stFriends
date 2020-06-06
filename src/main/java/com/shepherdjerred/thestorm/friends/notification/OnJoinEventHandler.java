@@ -21,6 +21,6 @@ public class OnJoinEventHandler<T extends PlayerIdentifier> implements Listener 
         var joiningPlayer = event.getPlayer();
         var joiningPlayerIdentifier = playerIdentifierFactory.get(joiningPlayer);
         var notification = notificationCreator.createNotification(joiningPlayerIdentifier);
-        notification.ifPresent(joiningPlayer::sendMessage);
+        joiningPlayer.sendMessage(notification);
     }
 }
