@@ -2,7 +2,8 @@ package com.shepherdjerred.thestorm.friends.player.identifier;
 
 import org.bukkit.entity.Player;
 
-public class UuidPlayerIdentifierFactory implements PlayerIdentifierFactory<UuidPlayerIdentifier> {
+public class UuidPlayerIdentifierFactory
+  implements PlayerIdentifierFactory<UuidPlayerIdentifier> {
 
   @Override
   public UuidPlayerIdentifier get(Player player) {

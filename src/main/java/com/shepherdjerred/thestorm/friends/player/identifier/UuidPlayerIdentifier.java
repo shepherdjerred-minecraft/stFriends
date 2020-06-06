@@ -1,12 +1,10 @@
 package com.shepherdjerred.thestorm.friends.player.identifier;
 
-import lombok.Value;
-
 import java.util.UUID;
+import lombok.Value;
 
 @Value
 public class UuidPlayerIdentifier implements PlayerIdentifier {
-
   UUID uuid;
 
   @Override
@@ -16,10 +14,5 @@ public class UuidPlayerIdentifier implements PlayerIdentifier {
     } else {
       throw new IllegalArgumentException();
     }
-  }
-
-  @Override
-  public String toString() {
-      return uuid.toString();
   }
 }
