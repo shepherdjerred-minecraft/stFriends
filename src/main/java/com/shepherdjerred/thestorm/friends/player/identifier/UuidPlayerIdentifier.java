@@ -1,16 +1,13 @@
 package com.shepherdjerred.thestorm.friends.player.identifier;
 
-import java.util.UUID;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
+import lombok.Value;
 
-@EqualsAndHashCode
-@AllArgsConstructor
+import java.util.UUID;
+
+@Value
 public class UuidPlayerIdentifier implements PlayerIdentifier {
 
-  @Getter
-  private final UUID uuid;
+  UUID uuid;
 
   @Override
   public boolean isSamePlayer(PlayerIdentifier playerIdentifier) {
@@ -19,5 +16,10 @@ public class UuidPlayerIdentifier implements PlayerIdentifier {
     } else {
       throw new IllegalArgumentException();
     }
+  }
+
+  @Override
+  public String toString() {
+      return uuid.toString();
   }
 }

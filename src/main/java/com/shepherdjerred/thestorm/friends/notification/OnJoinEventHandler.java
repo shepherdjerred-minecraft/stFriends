@@ -7,8 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import java.io.FileNotFoundException;
-import java.util.Optional;
+import java.io.IOException;
 
 @AllArgsConstructor
 public class OnJoinEventHandler<T extends PlayerIdentifier> implements Listener {
@@ -17,7 +16,7 @@ public class OnJoinEventHandler<T extends PlayerIdentifier> implements Listener 
     private final PlayerIdentifierFactory<T> playerIdentifierFactory;
 
     @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event) throws FileNotFoundException {
+    public void onPlayerJoin(PlayerJoinEvent event) throws IOException {
         var joiningPlayer = event.getPlayer();
         var joiningPlayerIdentifier = playerIdentifierFactory.get(joiningPlayer);
         var notification = notificationCreator.createNotification(joiningPlayerIdentifier);

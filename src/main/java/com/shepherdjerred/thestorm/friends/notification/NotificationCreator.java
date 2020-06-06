@@ -2,21 +2,19 @@ package com.shepherdjerred.thestorm.friends.notification;
 
 import com.shepherdjerred.thestorm.friends.friend.FriendGetter;
 import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifier;
-import com.shepherdjerred.thestorm.friends.player.identifier.UuidPlayerIdentifier;
 import com.shepherdjerred.thestorm.friends.player.information.PlayerInformation;
 import lombok.AllArgsConstructor;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.Optional;
 
 @AllArgsConstructor
 public class NotificationCreator<T extends PlayerIdentifier> {
 
     private final FriendGetter<T> friendGetter;
 
-    public String createNotification(T player) throws FileNotFoundException {
+    public String createNotification(T player) throws IOException {
         if (friendGetter.hasFriends(player)) {
             var friends = friendGetter.getFriends(player);
             var friendsMessage = new StringBuilder();
