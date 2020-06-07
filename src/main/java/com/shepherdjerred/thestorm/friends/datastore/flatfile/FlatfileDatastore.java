@@ -2,8 +2,6 @@ package com.shepherdjerred.thestorm.friends.datastore.flatfile;
 
 import com.shepherdjerred.thestorm.friends.datastore.Datastore;
 import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifier;
-import lombok.extern.log4j.Log4j2;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,6 +10,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import lombok.extern.log4j.Log4j2;
 
 /**
  * A flatfile datastore
