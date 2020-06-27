@@ -1,7 +1,7 @@
-package com.shepherdjerred.thestorm.friends.player.information;
+package com.shepherdjerred.minecraft.friends.player.information;
 
-import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifier;
-import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifierBukkitPlayerGetter;
+import com.shepherdjerred.minecraft.friends.player.identifier.PlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.identifier.PlayerIdentifierBukkitPlayerGetter;
 import java.time.Instant;
 import java.time.ZoneId;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.shepherdjerred.thestorm.friends.player.identifier;
+package com.shepherdjerred.minecraft.friends.player.identifier;
 
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;

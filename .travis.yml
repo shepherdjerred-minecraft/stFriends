@@ -10,3 +10,5 @@ deploy:
   on:
     branch: master
     jdk: openjdk14
+notifications:
+  email: false

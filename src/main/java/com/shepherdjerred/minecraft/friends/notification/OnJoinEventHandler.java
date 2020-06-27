@@ -1,7 +1,7 @@
-package com.shepherdjerred.thestorm.friends.notification;
+package com.shepherdjerred.minecraft.friends.notification;
 
-import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifier;
-import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifierFactory;
+import com.shepherdjerred.minecraft.friends.player.identifier.PlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.identifier.PlayerIdentifierFactory;
 import java.io.IOException;
 import lombok.AllArgsConstructor;
 import org.bukkit.event.EventHandler;

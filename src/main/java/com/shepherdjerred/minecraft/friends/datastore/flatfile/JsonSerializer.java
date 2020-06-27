@@ -1,9 +1,9 @@
-package com.shepherdjerred.thestorm.friends.datastore.flatfile;
+package com.shepherdjerred.minecraft.friends.datastore.flatfile;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.shepherdjerred.thestorm.friends.player.identifier.UuidPlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.identifier.UuidPlayerIdentifier;
 import java.util.Map;
 import java.util.Set;
 

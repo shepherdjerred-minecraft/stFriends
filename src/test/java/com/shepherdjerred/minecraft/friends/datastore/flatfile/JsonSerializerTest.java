@@ -1,6 +1,6 @@
-package com.shepherdjerred.thestorm.friends.datastore.flatfile;
+package com.shepherdjerred.minecraft.friends.datastore.flatfile;
 
-import com.shepherdjerred.thestorm.friends.player.identifier.UuidPlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.identifier.UuidPlayerIdentifier;
 import java.util.*;
 import org.junit.Assert;
 import org.junit.Before;

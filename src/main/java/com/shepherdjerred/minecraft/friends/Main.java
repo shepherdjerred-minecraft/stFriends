@@ -1,15 +1,15 @@
-package com.shepherdjerred.thestorm.friends;
+package com.shepherdjerred.minecraft.friends;
 
-import com.shepherdjerred.thestorm.friends.datastore.Datastore;
-import com.shepherdjerred.thestorm.friends.datastore.flatfile.FlatfileDatastore;
-import com.shepherdjerred.thestorm.friends.datastore.flatfile.JsonSerializer;
-import com.shepherdjerred.thestorm.friends.friend.FriendGetter;
-import com.shepherdjerred.thestorm.friends.notification.NotificationCreator;
-import com.shepherdjerred.thestorm.friends.notification.OnJoinEventHandler;
-import com.shepherdjerred.thestorm.friends.player.identifier.UuidPlayerIdentifier;
-import com.shepherdjerred.thestorm.friends.player.identifier.UuidPlayerIdentifierBukkitPlayerGetter;
-import com.shepherdjerred.thestorm.friends.player.identifier.UuidPlayerIdentifierFactory;
-import com.shepherdjerred.thestorm.friends.player.information.PlayerInformationGetter;
+import com.shepherdjerred.minecraft.friends.datastore.Datastore;
+import com.shepherdjerred.minecraft.friends.datastore.flatfile.FlatfileDatastore;
+import com.shepherdjerred.minecraft.friends.datastore.flatfile.JsonSerializer;
+import com.shepherdjerred.minecraft.friends.friend.FriendGetter;
+import com.shepherdjerred.minecraft.friends.notification.NotificationCreator;
+import com.shepherdjerred.minecraft.friends.notification.OnJoinEventHandler;
+import com.shepherdjerred.minecraft.friends.player.identifier.UuidPlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.identifier.UuidPlayerIdentifierBukkitPlayerGetter;
+import com.shepherdjerred.minecraft.friends.player.identifier.UuidPlayerIdentifierFactory;
+import com.shepherdjerred.minecraft.friends.player.information.PlayerInformationGetter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 @SuppressWarnings("unused")

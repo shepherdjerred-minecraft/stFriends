@@ -1,6 +1,6 @@
-package com.shepherdjerred.thestorm.friends.datastore.flatfile;
+package com.shepherdjerred.minecraft.friends.datastore.flatfile;
 
-import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.identifier.PlayerIdentifier;
 import java.util.Map;
 import java.util.Set;
 

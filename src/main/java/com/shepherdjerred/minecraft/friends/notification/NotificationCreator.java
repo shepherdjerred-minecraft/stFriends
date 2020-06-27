@@ -1,8 +1,8 @@
-package com.shepherdjerred.thestorm.friends.notification;
+package com.shepherdjerred.minecraft.friends.notification;
 
-import com.shepherdjerred.thestorm.friends.friend.FriendGetter;
-import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifier;
-import com.shepherdjerred.thestorm.friends.player.information.PlayerInformation;
+import com.shepherdjerred.minecraft.friends.friend.FriendGetter;
+import com.shepherdjerred.minecraft.friends.player.identifier.PlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.information.PlayerInformation;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;

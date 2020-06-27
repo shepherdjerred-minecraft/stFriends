@@ -1,9 +1,9 @@
-package com.shepherdjerred.thestorm.friends.friend;
+package com.shepherdjerred.minecraft.friends.friend;
 
-import com.shepherdjerred.thestorm.friends.datastore.Datastore;
-import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifier;
-import com.shepherdjerred.thestorm.friends.player.information.PlayerInformation;
-import com.shepherdjerred.thestorm.friends.player.information.PlayerInformationGetter;
+import com.shepherdjerred.minecraft.friends.datastore.Datastore;
+import com.shepherdjerred.minecraft.friends.player.identifier.PlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.information.PlayerInformation;
+import com.shepherdjerred.minecraft.friends.player.information.PlayerInformationGetter;
 import java.io.IOException;
 import java.util.Set;
 import java.util.stream.Collectors;

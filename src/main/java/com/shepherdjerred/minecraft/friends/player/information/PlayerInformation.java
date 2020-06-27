@@ -1,6 +1,6 @@
-package com.shepherdjerred.thestorm.friends.player.information;
+package com.shepherdjerred.minecraft.friends.player.information;
 
-import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.identifier.PlayerIdentifier;
 import java.time.LocalDateTime;
 import lombok.Value;
 

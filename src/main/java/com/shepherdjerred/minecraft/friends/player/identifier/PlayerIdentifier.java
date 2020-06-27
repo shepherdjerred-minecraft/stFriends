@@ -1,4 +1,4 @@
-package com.shepherdjerred.thestorm.friends.player.identifier;
+package com.shepherdjerred.minecraft.friends.player.identifier;
 
 public interface PlayerIdentifier {
   boolean isSamePlayer(PlayerIdentifier playerIdentifier);

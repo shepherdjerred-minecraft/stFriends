@@ -1,6 +1,6 @@
-package com.shepherdjerred.thestorm.friends.datastore;
+package com.shepherdjerred.minecraft.friends.datastore;
 
-import com.shepherdjerred.thestorm.friends.player.identifier.PlayerIdentifier;
+import com.shepherdjerred.minecraft.friends.player.identifier.PlayerIdentifier;
 import java.io.IOException;
 import java.util.Set;
 
