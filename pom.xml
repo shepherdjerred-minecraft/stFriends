@@ -11,7 +11,7 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>stFriends</artifactId>
+  <artifactId>friends</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
   <name>stFriends</name>
